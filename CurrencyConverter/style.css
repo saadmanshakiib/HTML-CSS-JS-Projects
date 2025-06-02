@@ -1,0 +1,85 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #007BFF;
+}
+
+/* Input & Select Styles */
+input[type="number"] {
+    padding: 10px;
+    font-size: 1rem;
+    width: 200px;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+input[type="number"]:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+select {
+    padding: 10px;
+    font-size: 1rem;
+    width: 210px;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+select:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+/* Button Styles */
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Result Text Styles */
+#result {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Centering the container */
+.container {
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

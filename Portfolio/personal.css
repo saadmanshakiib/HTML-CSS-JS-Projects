@@ -1,0 +1,94 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  
+  display: flex;
+  gap: 50px;
+  justify-content: flex-start;
+  line-height: 1.6;
+}
+
+/* Personal and Family Sections */
+#personal, #family {
+  background-color: #2d2d2d;
+  padding: 30px 35px;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+  flex: 1;
+}
+
+/* Left align personal info text */
+#personal {
+  text-align: left;
+}
+
+/* Center align family info text */
+#family {
+  text-align: center;
+}
+
+/* Headings */
+h1 {
+  font-size: 2.3rem;
+  color: #4ea8de;
+  font-weight: 700;
+  margin-bottom: 25px;
+  border-bottom: 3px solid #48bfe3;
+  padding-bottom: 10px;
+}
+
+/* Paragraphs */
+p {
+  font-size: 1.1rem;
+  color: #b8b8b8;
+  margin-bottom: 14px;
+  font-weight: 500;
+}
+
+/* Links */
+a {
+  color: #56cfe1;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #48bfe3;
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  #personal, #family {
+    text-align: left;
+    margin-bottom: 30px;
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
+#personal:hover,
+#family:hover {
+  cursor: pointer;
+}

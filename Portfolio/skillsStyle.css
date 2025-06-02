@@ -1,0 +1,265 @@
+/* Modern Dark Mode Portfolio CSS for Skills and Projects */
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+  line-height: 1.6;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Skills Section */
+.skills {
+  margin: 40px 0;
+  background-color: #2d2d2d;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.skills h2 {
+  font-size: 2.2rem;
+  color: #4ea8de;
+  margin-bottom: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.skills h2:after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #56cfe1;
+  margin: 10px auto;
+}
+
+.skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  list-style: none;
+}
+
+.skills ul ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #333333;
+  border-radius: 10px;
+  padding: 20px;
+  width: 150px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.skills ul ul:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  background-color: #3d3d3d;
+}
+
+.skills img {
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
+}
+
+.skills ul ul:hover img {
+  transform: scale(1.1);
+}
+
+/* Projects Section */
+#projects_nav {
+  background-color: #2d2d2d;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  margin-bottom: 40px;
+}
+
+#projects_nav h2 {
+  font-size: 2.2rem;
+  color: #4ea8de;
+  margin-bottom: 20px;
+  text-align: center;
+  position: relative;
+}
+
+#projects_nav h2:after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #56cfe1;
+  margin: 10px auto;
+}
+
+.javabutton, .jsbutton, .htmlbutton {
+  background-color: #1f6582;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 10px 10px 20px 0;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.javabutton:hover, .jsbutton:hover, .htmlbutton:hover {
+  background-color: #48bfe3;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(72, 191, 227, 0.4);
+}
+
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#javaProjects, #jsProjects, #htmlProjects {
+  background-color: #333333;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+  border-left: 4px solid #56cfe1;
+}
+
+#javaProjects p, #jsProjects p, #htmlProjects p {
+  margin-bottom: 20px;
+  line-height: 1.8;
+  color: #b8b8b8;
+}
+
+#javaProjects strong, #jsProjects strong, #htmlProjects strong {
+  color: #56cfe1;
+  font-size: 1.2rem;
+  display: block;
+  margin-bottom: 8px;
+}
+
+#javaProjects a, #jsProjects a, #htmlProjects a {
+  color: #4ea8de;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+#javaProjects a:hover, #jsProjects a:hover, #htmlProjects a:hover {
+  color: #56cfe1;
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .skills ul {
+    gap: 15px;
+  }
+  
+  .skills ul ul {
+    width: 120px;
+    padding: 15px;
+  }
+  
+  .skills img {
+    height: 40px;
+    width: 40px;
+  }
+  
+  #projects_nav, .skills {
+    padding: 20px;
+  }
+  
+  #projects_nav h2, .skills h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills ul ul {
+    width: 100px;
+    padding: 10px;
+  }
+  
+  .skills img {
+    height: 35px;
+    width: 35px;
+  }
+  
+  .javabutton, .jsbutton, .htmlbutton {
+    padding: 10px 20px;
+  }
+}
+.cppbutton {
+  background-color: #1f6582;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 10px 10px 20px 0;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.cppbutton:hover {
+  background-color: #48bfe3;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(72, 191, 227, 0.4);
+
+}
+
+#cpp {
+  background-color: #333333;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+  border-left: 4px solid #56cfe1;
+}
+
+#cpp p {
+  margin-bottom: 20px;
+  line-height: 1.8;
+  color: #b8b8b8;
+}
+
+#cpp strong {
+  color: #56cfe1;
+  font-size: 1.2rem;
+  display: block;
+  margin-bottom: 8px;
+}
+
+#cpp a {
+  color: #4ea8de;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+#cpp a:hover {
+  color: #56cfe1;
+  text-decoration: underline;
+}
+

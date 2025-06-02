@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Temperature Convert</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="convert.js"></script>
+    </head>
+    <body>
+        <h1>Convert Temperature</h1>
+        <h2>Enter Temperature </h2>
+        <input id="convertTemp" type="number">
+        <p>From : </p>
+        <select id="from_temp">
+            <option value="Celsius">Celsius</option>
+            <option value="Farenheit">Farenheit</option>
+            <option value="Kelvin">Kelvin</option>
+        </select>
+        <br>
+          <p>To : </p>
+        <select id="to_temp">
+            <option value="Celsius">Celsius</option>
+            <option value="Farenheit">Farenheit</option>
+            <option value="Kelvin">Kelvin</option>
+        </select>
+        <button onclick="convert()">Convert</button>
+        <h2 id="result"></h2>
+    </body>
+</html>

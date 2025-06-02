@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Skills</title>
+        <link rel="stylesheet" href="skillsStyle.css">
+    </head>
+    <body>
+        <div class="skills">
+            <ul>
+                <ul><img src="c-.png" height="50px" width="50px">C++</ul>
+                <ul><img src="java.png" height="50px" width="50px">JAVA</ul>
+                <ul><img src="js.png" height="50px" width="50px">JAVASCRIPT</ul>
+                <ul><img src="html-5.png" height="50px" width="50px">HTML</ul>
+            </ul>
+        </div>
+
+        <nav id="projects_nav">
+            <h2>Projects</h2>
+
+            <div class="button-container">
+                <button class="javabutton" onclick="toggleJava()">Java</button>
+                <button class="htmlbutton" onclick="toggleHTML()">HTML</button>
+                <button class="jsbutton" onclick="toggleJs()">JavaScript</button>
+                <button class="cppbutton" onclick="toggleCPP()">C++</button>
+            </div>
+
+            <div id="javaProjects" style="display: none;">
+                <p>
+                    <strong>Real Estate Management System</strong><br>
+                    A system where users can buy/sell properties and admins manage property listings.
+                </p>
+                <p>GitHub: <a href="https://github.com/saadmanshakiib/Real-Estate-Management-System">Project 1</a></p>
+
+                <p>
+                    <strong>Online Restaurant</strong><br>
+                    Users can log in, browse, and order food online.
+                </p>
+                <p>GitHub: <a href="https://github.com/saadmanshakiib/Online-Restaurent-JAVA-SWING-">Project 2</a></p>
+
+                <p>
+                    <strong>Buy Bus Ticket</strong><br>
+                    Bus seat selection and ticket purchasing app with login system.
+                </p>
+                <p>GitHub: <a href="https://github.com/saadmanshakiib/Online-Bus-Ticket-Swing-UI">Project 3</a></p>
+            </div>
+
+            <div id="htmlProjects" style="display: none;">
+                <p>
+                    <strong>Calculator</strong><br>
+                    A basic calculator using HTML and JavaScript.
+                </p>
+                <p>GitHub: <a href="https://github.com/saadmanshakiib/HTML-JS-PROJECTS/tree/main/Calculator2">Calculator</a></p>
+
+                <p>
+                    <strong>Currency Converter</strong><br>
+                    Convert between different currencies.
+                </p>
+                <p>GitHub: <a href="https://github.com/saadmanshakiib/HTML-JS-PROJECTS/tree/main/CurrencyConverter">Currency Converter</a></p>
+
+                <p>
+                    <strong>Temperature Convert</strong><br>
+                    Convert and fetch live temperature data from APIs.
+                </p>
+                <p>GitHub: <a href="https://github.com/saadmanshakiib/HTML-JS-PROJECTS/tree/main/Weather">Weather Project</a></p>
+
+                <p>
+                    <strong>Text To Voice Convert</strong><br>
+                    Converts typed text into speech.
+                </p>
+                <p>GitHub: <a href="https://github.com/saadmanshakiib/HTML-JS-PROJECTS/tree/main/Text%20To%20voice">Text To Voice</a></p>
+            </div>
+
+            <div id="jsProjects" style="display: none;">
+                <p>
+                    <strong>Interactive Web Components</strong><br>
+                    Modern JS elements with ES6+ features.
+                </p>
+                <p>GitHub: <a href="#">JavaScript Components</a></p>
+
+                <p>
+                    <strong>API Integration Projects</strong><br>
+                    Handling data fetch, async ops, and rendering.
+                </p>
+                <p>GitHub: <a href="#">API Projects</a></p>
+
+                <p>
+                    <strong>DOM Manipulation Apps</strong><br>
+                    Advanced DOM techniques and event handling.
+                </p>
+                <p>GitHub: <a href="#">DOM Projects</a></p>
+            </div>
+
+            <div id="cpp" style="display: none;">
+                <p>C++ was used for Data Structures and Algorithms problem solving.</p>
+
+                <div>
+                    <strong><a href="https://leetcode.com/u/saadmanshakib/">Leetcode</a></strong>
+                    <p>
+                        Solved problems from various topics like arrays, strings, sorting, binary search, greedy, and dynamic programming.
+                    </p>
+                </div>
+
+                <div>
+                    <strong><a href="https://codeforces.com/profile/23-sadman-3">CodeForces</a></strong>
+                    <p>
+                        Participated in contests and solved problems using C++.<br>
+                        Current Rating: 795
+                    </p>
+                </div>
+
+                <div>
+                    <strong><a href="https://judge.beecrowd.com/en/profile/789543">BeeCrowd</a></strong>
+                    <p>
+                        Early-stage problem solving with C++.<br>
+                        Total Solved: 65<br>
+                        University Rank: 93rd
+                    </p>
+                </div>
+            </div>
+        </nav>
+
+        <script>
+            function hideAllProjects() {
+                document.getElementById("javaProjects").style.display = "none";
+                document.getElementById("htmlProjects").style.display = "none";
+                document.getElementById("jsProjects").style.display = "none";
+                document.getElementById("cpp").style.display = "none";
+            }
+
+            function toggleJava() {
+                let section = document.getElementById("javaProjects");
+                if (section.style.display === "none" || section.style.display === "") {
+                    hideAllProjects();
+                    section.style.display = "block";
+                } else {
+                    section.style.display = "none";
+                }
+            }
+
+            function toggleHTML() {
+                let section = document.getElementById("htmlProjects");
+                if (section.style.display === "none" || section.style.display === "") {
+                    hideAllProjects();
+                    section.style.display = "block";
+                } else {
+                    section.style.display = "none";
+                }
+            }
+
+            function toggleJs() {
+                let section = document.getElementById("jsProjects");
+                if (section.style.display === "none" || section.style.display === "") {
+                    hideAllProjects();
+                    section.style.display = "block";
+                } else {
+                    section.style.display = "none";
+                }
+            }
+
+            function toggleCPP() {
+                let section = document.getElementById("cpp");
+                if (section.style.display === "none" || section.style.display === "") {
+                    hideAllProjects();
+                    section.style.display = "block";
+                } else {
+                    section.style.display = "none";
+                }
+            }
+        </script>
+    </body>
+</html>

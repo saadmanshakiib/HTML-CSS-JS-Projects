@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Rate Koto? (Takar)</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container"> 
+            <h1>Rate Koto? (Takar)</h1>
+
+            <input type="number" id="taka" placeholder="BDT">
+
+            <select id="Tk">
+                <option value="USD">US Dollar</option>
+                <option value="CAD">Canadian Dollar</option>
+                <option value="SAR">Saudi Riyal</option>
+                <option value="MYR">Malaysian Ringgit</option>
+                <option value="AUD">Australian Dollar</option>
+                <option value="CNY">Chinese Yen</option>
+            </select>
+
+            <button onclick="ScriptToCheck()">Rate Dekhi</button>
+
+            <p id="result">
+                <h3 id="chosen"></h3>
+            </p>
+        </div>
+        <script src="ScriptToCheck.js"></script>
+    </body>
+</html>
