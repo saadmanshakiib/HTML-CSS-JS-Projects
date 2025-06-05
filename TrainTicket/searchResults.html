@@ -1,19 +1,48 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>Search Result</title>
-    </head>
-    <body>
-        <div id="results">
-                <p id="available_trains">
+<head>
+    <title>Search Results</title>
+    <link rel="stylesheet" href="SR.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Search Results</h2>
+        <div id="results" class="results-box"></div>
+        <button onclick="window.location.href='homepage.html'" class="back-btn">🔙 Back</button>
+    </div>
 
-                    <h3>Train Name : <h2 id="trainName"></h2></h3>
-                    <h3>From :<h3 id="From"></h3> </h3>
-                    <h3>To : <h3 id="To"></h3></h3>
-                    <h3>Arrival : <h3 id="StartTime"></h3></h3>
-                    <h3>Reaching Time : <h3 id="EndTime"></h3></h3>
-                    <button>View-></button>
+    <script>
+        function searchResults() {
+            const matched_bus1 = JSON.parse(localStorage.getItem("matched_bus"));
+            const res = document.getElementById("results");
 
-                </p>
-        </div>
-    </body>
+            if (!matched_bus1 || matched_bus1.length === 0) {
+                res.innerHTML = '<p class="no-result">No Matched Bus Found</p>';
+            } else {
+                let print = '<p class="available-title">Available Bus:</p><ul>';
+                matched_bus1.forEach(bus => {
+                    print += `
+                        <li class="train-card">
+                            <strong>
+                                Bus No: ${bus.bus_no}<br>
+                                Bus Name: ${bus.bus_name}<br>
+                                From: ${bus.from_station}<br>
+                                To: ${bus.to_station}<br>
+                                Starting Time: ${bus.starting_time}<br>
+                                Ending Time: ${bus.reaching_time}<br>
+                                Boarding Point : ${bus.boarding_point}<br>
+                                Dropping Point : ${bus.dropping_point} <br>
+                                Break Point : ${bus.break_point}<br>
+                            </strong>
+                            <button>View</button>
+                        </li>`;
+                });
+                print += '</ul>';
+                res.innerHTML = print;
+            }
+        }
+
+        window.onload = searchResults;
+    </script>
+</body>
 </html>

@@ -90,68 +90,96 @@ function check(){
 }
 
 function search(){
-
     const from = document.getElementById("fromStation").value;
     const to = document.getElementById("toStation").value;
     const date = document.getElementById("journeyDate").value;
 
     if(from == "" || to == "" || date == ""){
         alert("Please fill all the fields");
+        return;
+    }
+    if(from == to){
+        alert("Both Starting Location & Destination Cant Be Same!");
+        return;
     }
 
-        else{
-            window.location.href = "searchResults.html";
-             let trains = [
+                 let bus = [
         {
-            train_name : "Suborno Express",
-            train_no : "701",
+            bus_name : "Hanif",
+            bus_no : "701",
             from_station : "Chittagong",
             to_station : "Dhaka",
             starting_time : "7:30 AM",
-            reaching_time : "12:00 PM"
+            reaching_time : "12:00 PM",
+            boarding_point : "Dampara Bus Stand",
+            dropping_point : "Abdullahpur Bus Stand",
+                        break_point : "Hotel Noorzahan"
         },
         {
-            train_name : "Sonar Bangla Express",
-            train_no : "702",
+            bus_name : "Sonar Bangla Express",
+            bus_no : "702",
             from_station : "Chittagong",
             to_station : "Dhaka",
             starting_time : "5:00 PM",
-            reaching_time : "9:00 PM"
+            reaching_time : "9:00 PM",
+            boarding_point : "Dampara Bus Stand",
+            dropping_point : "Abdullahpur Bus Stand",
+                        break_point : "Hotel Noorzahan"
         },
         {
-            train_name : "Sonar Bangla Express",
-            train_no : "703",
+            bus_name : "Sonar Bangla Express",
+            bus_no : "703",
             from_station : "Dhaka",
             to_station : "Chittagong",
             starting_time : "7:30 AM",
-            reaching_time : "12:00 PM"
+            reaching_time : "12:00 PM",
+            boarding_point : "Abdullahpur Bus Stand",
+            dropping_point : "Dampara Bus Stand",
+                        break_point : "Hotel Noorzahan"
         },
         {
-            train_name : "Suborno Express",
-            train_no : "704",
+            bus_name : "Hanif",
+            bus_no : "704",
             from_station : "Dhaka",
             to_station : "Chittagong",
             starting_time : "7:30 AM",
-            reaching_time : "12:00 PM"
+            reaching_time : "12:00 PM",
+            boarding_point : "Abdullahpur Bus Stand",
+            dropping_point : "Dampara Bus Stand",
+            break_point : "Hotel Noorzahan"
+        },
+        {
+            bus_name : "Saudia",
+            bus_no : "705",
+            from_station : "Chittagong",
+            to_station : "Dhaka",
+            starting_time : "10:00 AM",
+            reaching_time : "1:00 PM",
+            boarding_point : "Dampara Bus Stand",
+            dropping_point : "Abdullahpur Bus Stand",
+                        break_point : "Hotel Noorzahan"
+        },
+        {
+            bus_name : "Saudia",
+            bus_no : "706",
+            from_station : "Dhaka",
+            to_station : "Chittagong",
+            starting_time : "1:00 PM",
+            reaching_time : "6:00 PM",
+            boarding_point : "Abdullahpur Bus Stand",
+            dropping_point : "Dampara Bus Stand",
+                        break_point : "Hotel Noorzahan"
         }
     ]
 
-    let matched_trains = trains.filter(
-                                train => train.from_station.toLowerCase() == from.toLowerCase() &&
-                                train.to.toLowerCase() == to.toLowerCase());
+    let matched_bus = bus.filter(
+                                bus1 => bus1.from_station.toLowerCase() === from.toLowerCase() &&
+                                bus1.to_station.toLowerCase() == to.toLowerCase()
+                            );
 
-                document.getElementById("trainName").value = matched_trains.train_name;    
-                document.getElementById("From").value = matched_trains.from_station;
-                document.getElementById("To").value = matched_trains.to_station;
-                document.getElementById("StartTime").value = matched_trains.starting_time;
-                document.getElementById("EndTime").value = matched_trains.reaching_time;
-
-
-
-        
-        }
-            
-
-    
-
+    localStorage.setItem("matched_bus",JSON.stringify(matched_bus));
+    localStorage.setItem("journeyDate",date);
+    window.location.href = "searchResults.html";
 }
+        
+

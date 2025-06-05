@@ -23,8 +23,8 @@
             <option>November</option>
             <option>December</option>
         </select>
-        <input id="date" type="number" placeholder="Date">
-        <input id="year" type="number" placeholder="Year"><br>
+        <input id="date" type="number" placeholder="Date" min="1" max="31">
+        <input id="year" type="number" placeholder="Year" min="1980" max="2025"><br>
         <h2>Create Password</h2><input id="pass" type="password" placeholder="6 Digit Password"><br>
         <h2>Confirm Password</h2><input id="confirmedpass" type="password" placeholder="Confirm Your Password"><br>
         <button onclick="check()">Sign Up</button>
