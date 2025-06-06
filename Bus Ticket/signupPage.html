@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Sign Up</title>
+            <link rel="stylesheet" href="signup.css">
+    </head>
+    <body>
+        <h2>User Name</h2><input id="name" type="text" placeholder="Full Name"><br>
+        <h2>Mobile Number</h2><input id="number" type="number" placeholder="Number"><br>
+        <h2>Email</h2><input id="email" type="text" placeholder="Email"><br>
+        <h2>NID Number</h2><input id="nid" type="number"><br>
+        <h2>Choose Month</h2><select id="birthmonth">
+            <option></option>
+            <option>January</option>
+            <option>February</option>
+            <option>Macrh</option>
+            <option>April</option>
+            <option>May</option>
+            <option>June</option>
+            <option>July</option>
+            <option>August</option>
+            <option>September</option>
+            <option>October</option>
+            <option>November</option>
+            <option>December</option>
+        </select>
+        <input id="date" type="number" placeholder="Date" min="1" max="31">
+        <input id="year" type="number" placeholder="Year" min="1980" max="2025"><br>
+        <h2>Create Password</h2><input id="pass" type="password" placeholder="6 Digit Password"><br>
+        <h2>Confirm Password</h2><input id="confirmedpass" type="password" placeholder="Confirm Your Password"><br>
+        <button onclick="check()">Sign Up</button>
+    </body>
+    <script src="script.js"></script>
+</html>

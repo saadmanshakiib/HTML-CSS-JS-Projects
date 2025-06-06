@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>
+        HomePage
+    </title>
+    <link rel="stylesheet" href="homepage.css">
+    </head>
+    <body>
+       <div id="intro">
+         <h1>BD Direct Bus Service</h1>
+         <h3>Travel Safe With Us</h3>
+       </div>
+<div class="searching-box">
+            <h2>Select Starting Location</h2><br>
+        <input id ="fromStation" type="text" list = "fromlist" placeholder="Arrival"><br>
+        
+        <datalist id="fromlist">
+            <option>Dhaka</option>
+            <option>Chittagong</option>
+        </datalist>
+        
+        <h2>Select Destination</h2><br>
+        <input id ="toStation" type="text" list = "tolist"placeholder="Destination "><br>
+            
+        <datalist id="tolist">
+            <option value="Dhaka"></option>
+            <option value="Chittagong"></option>
+        </datalist>
+            
+        <h2>Pick Journey Date</h2>
+            <input id="journeyDate" type="date" min="2025-06-03" max="2025-06-13"><br>
+            <button onclick="search()">Search</button>
+</div>
+            <script src="script.js"></script>
+    </body>
+</html>

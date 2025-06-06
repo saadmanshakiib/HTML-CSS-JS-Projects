@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    background-color: #f2f2f2;
+}
+
+#seats_div {
+    display: inline-block;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.seat-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 8px 0;
+}
+
+button {
+    width: 45px;
+    height: 45px;
+    margin: 5px;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover:not(:disabled) {
+    background-color: #45a049;
+}
+
+button:disabled {
+    background-color: #d3d3d3;
+    color: #888;
+    cursor: not-allowed;
+}
+
+.big-aisle {
+    width: 80px; /* bigger gap between seat groups */
+}
+
+.driver-door {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding: 0 10px;
+}
+
+.door, .driver {
+    font-weight: bold;
+    padding: 6px 12px;
+    background-color: #eeeeee;
+    border-radius: 6px;
+    font-size: 14px;
+}

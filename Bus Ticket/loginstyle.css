@@ -1,0 +1,59 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #74ebd5, #ACB6E5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Sign-in container */
+.sign-in {
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Sign-in title */
+.sign-in h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Input fields */
+.sign-in input[type="text"],
+.sign-in input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+/* Button container */
+.buttons {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Buttons */
+.buttons button {
+    padding: 12px 24px;
+    margin: 10px;
+    border: none;
+    border-radius: 6px;
+    background-color: #5C67F2;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.buttons button:hover {
+    background-color: #3c4cd8;
+}

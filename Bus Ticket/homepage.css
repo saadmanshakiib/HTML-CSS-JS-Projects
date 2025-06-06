@@ -1,0 +1,82 @@
+/* General Page Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eef3f7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Intro Header */
+#intro {
+    text-align: center;
+    padding: 40px 0 20px;
+}
+
+#intro h1 {
+    font-size: 36px;
+    color: #1d3557;
+    margin: 0;
+}
+
+#intro h3 {
+    font-size: 20px;
+    color: #457b9d;
+    margin: 10px 0;
+}
+
+/* Search Box Container */
+.searching-box {
+    background-color: white;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 360px;
+    text-align: left;
+}
+
+/* Headings */
+.searching-box h2 {
+    font-size: 18px;
+    color: #333;
+    margin: 20px 0 8px;
+}
+
+/* Inputs */
+input[type="text"],
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #1d3557;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0f2c4c;
+}
+
+/* Responsive tweaks (optional) */
+@media (max-width: 400px) {
+    .searching-box {
+        width: 90%;
+        padding: 20px;
+    }
+}
