@@ -3,15 +3,22 @@
 <head>
     <title>Seats</title>
     <link rel="stylesheet" href="seats.css">
+    <style>
+        .selected {
+            background-color: red !important;
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <h2>Available Seats</h2>
-<button id="back" 
-    style="position: fixed; top: 20px; left: 20px; padding: 10px 6px; 
-           background-color: #007bff;
-           border-radius: 10px; cursor: pointer; font-weight: bold; 
-           box-shadow: 0 2px 6px rgba(0,0,0,0.2); z-index: 1000;" 
-    onclick='window.location.href="searchResults.html"'>Back</button>
+    <button id="back" 
+        style="position: fixed; top: 20px; left: 20px; padding: 10px 6px; 
+               background-color: #007bff;
+               border-radius: 10px; cursor: pointer; font-weight: bold; 
+               box-shadow: 0 2px 6px rgba(0,0,0,0.2); z-index: 1000;" 
+        onclick='window.location.href="searchResults.html"'>Back</button>
+
     <div id="seats_div">
         <div class="seat-row driver-door">
             <div class="door">Door</div>
@@ -20,62 +27,66 @@
 
         <div class="seat-row">
             <button disabled>1</button>
-            <button onclick="checkSits()">2</button>
+            <button onclick="selectSeat(this)">2</button>
             <div class="big-aisle"></div>
-            <button onclick="checkSits()">3</button>
-            <button onclick="checkSits()">4</button>
+            <button onclick="selectSeat(this)">3</button>
+            <button onclick="selectSeat(this)">4</button>
         </div>
         <div class="seat-row">
-            <button onclick="checkSits()">5</button>
+            <button onclick="selectSeat(this)">5</button>
             <button disabled>6</button>
             <div class="big-aisle"></div>
-            <button onclick="checkSits()">7</button>
-            <button onclick="checkSits()">8</button>
+            <button onclick="selectSeat(this)">7</button>
+            <button onclick="selectSeat(this)">8</button>
         </div>
         <div class="seat-row">
-            <button onclick="checkSits()">9</button>
+            <button onclick="selectSeat(this)">9</button>
             <button disabled>10</button>
             <div class="big-aisle"></div>
-            <button onclick="checkSits()">11</button>
-            <button onclick="checkSits()">12</button>
+            <button onclick="selectSeat(this)">11</button>
+            <button onclick="selectSeat(this)">12</button>
         </div>
         <div class="seat-row">
             <button disabled>13</button>
-            <button onclick="checkSits()">14</button>
+            <button onclick="selectSeat(this)">14</button>
             <div class="big-aisle"></div>
             <button disabled>15</button>
-            <button onclick="checkSits()">16</button>
+            <button onclick="selectSeat(this)">16</button>
         </div>
         <div class="seat-row">
-            <button onclick="checkSits()">17</button>
-            <button onclick="checkSits()">18</button>
+            <button onclick="selectSeat(this)">17</button>
+            <button onclick="selectSeat(this)">18</button>
             <div class="big-aisle"></div>
             <button disabled>19</button>
-            <button onclick="checkSits()">20</button>
+            <button onclick="selectSeat(this)">20</button>
         </div>
         <div class="seat-row">
-            <button onclick="checkSits()">21</button>
-            <button onclick="checkSits()">22</button>
+            <button onclick="selectSeat(this)">21</button>
+            <button onclick="selectSeat(this)">22</button>
             <div class="big-aisle"></div>
-            <button onclick="checkSits()">23</button>
-            <button onclick="checkSits()">24</button>
+            <button onclick="selectSeat(this)">23</button>
+            <button onclick="selectSeat(this)">24</button>
         </div>
         <div class="seat-row">
-            <button onclick="checkSits()">25</button>
-            <button onclick="checkSits()">26</button>
+            <button onclick="selectSeat(this)">25</button>
+            <button onclick="selectSeat(this)">26</button>
             <div class="big-aisle"></div>
-            <button onclick="checkSits()">27</button>
-            <button onclick="checkSits()">28</button>
+            <button onclick="selectSeat(this)">27</button>
+            <button onclick="selectSeat(this)">28</button>
         </div>
         <div class="seat-row">
-            <button onclick="checkSits()">29</button>
-            <button onclick="checkSits()">30</button>
+            <button onclick="selectSeat(this)">29</button>
+            <button onclick="selectSeat(this)">30</button>
             <div class="big-aisle"></div>
-            <button onclick="checkSits()">31</button>
-            <button onclick="checkSits()">32</button>
+            <button onclick="selectSeat(this)">31</button>
+            <button onclick="selectSeat(this)">32</button>
         </div>
     </div>
 
-    <script src="checkSits()"></script>
+    <div class="button">
+        <button id="confirmButton" disabled onclick="Confirm()">Confirm</button>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

@@ -173,8 +173,8 @@ function search(){
     ]
 
     let matched_bus = bus.filter(
-                                bus1 => bus1.from_station.toLowerCase() === from.toLowerCase() &&
-                                bus1.to_station.toLowerCase() == to.toLowerCase()
+    bus1 => bus1.from_station.toLowerCase() === from.toLowerCase() &&
+    bus1.to_station.toLowerCase() == to.toLowerCase()
                             );
 
     localStorage.setItem("matched_bus",JSON.stringify(matched_bus));
@@ -182,8 +182,34 @@ function search(){
     window.location.href = "searchResults.html";
 }
 
-function checkSits(){
-    
+function Confirm(){
+
+    const confirmMesg = confirm("Are you sure to continue ?");
+    if(confirmMesg) window.location.href = "paymentpage.html";
+    else return;
 }
-        
+
+            let selectedSeats = [];
+
+   
+        function selectSeat(button){
+
+            const seatNumber = button.innerText;
+
+            if(button.classList.contains("selected")){
+                button.classList.remove("selected");
+                selectedSeats = selectedSeats.filter(
+                    seats => seats !== seatNumber
+                );
+            }
+            else{
+                        if(selectedSeats.length >= 3){
+                            alert("You cant choose more than 3 seats");
+                            return;
+                        }
+                        button.classList.add("selected");
+                        selectedSeats.push(seatNumber);
+            }
+                document.getElementById("confirmButton").disabled = selectedSeats.length === 0;
+        }
 
