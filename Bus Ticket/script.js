@@ -185,12 +185,11 @@ function search(){
 function Confirm(){
 
     const confirmMesg = confirm("Are you sure to continue ?");
-    if(confirmMesg) window.location.href = "paymentpage.html";
+    if(confirmMesg) window.location.href = "payment.html";
     else return;
 }
 
             let selectedSeats = [];
-
    
         function selectSeat(button){
 
@@ -211,5 +210,43 @@ function Confirm(){
                         selectedSeats.push(seatNumber);
             }
                 document.getElementById("confirmButton").disabled = selectedSeats.length === 0;
+        }
+
+        function payment(){
+            const accnumber = document.getElementById("acc").value;
+                        const pin = document.getElementById("pass").value;
+
+                        let Accounts = [
+                            {
+                                account_number : "11111111",
+                                password : "asdf"
+                            },
+                            {
+                                account_number : "22222222",
+                                password : "qwer"
+                            },
+                            {
+                                account_number : "33333333",
+                                password : "zxcv"
+                            }
+                        ];
+                            let found = false;
+                        for(let i=0;i<Accounts.length;i++){
+                            if(Accounts[i].account_number == accnumber && Accounts[i].password == pin){
+                                found = true;
+                        localStorage.setItem("Logged_Account",Accounts[i].account_number);
+                                break;    
+                                                }
+                        }
+                        if(found){
+                            window.location.href = "paymentdone.html";
+                        }
+                        else{
+                                alert("Account Number and Password Doesnt Match");
+                                document.getElementById("acc").value = "";
+                                document.getElementById("pass").value = "";
+                                return;
+                            
+                        }
         }
 

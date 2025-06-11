@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Payment Done</title>
+        <link rel="stylesheet" href="done.css">
+    </head>
+    <body>
+        <button id="backBtn" onclick='window.location.href="bkash.html"'>Back</button>
+        <h3>Payment Successfull</h3>
+            <p id="display_accNo"></p>
+        <script>
+            let account_no = localStorage.getItem("Logged_Account");
+            let a = account_no.substring(0,2) + "****" + account_no.substring(6);
+            let print = `Account Number : ${a}<br>`;
+                if(account_no){
+                    document.getElementById("display_accNo").innerHTML = print;
+                }
+                else{
+                    alert("Something went wrong");
+                }
+        </script>
+    </body>
+</html>
