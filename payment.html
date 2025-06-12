@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="payment.css">
+</head>
+<body onload="price()">
+    <button onclick="window.location.href='seats.html'">Back</button>
+    <h2>Payment</h2>
+    <h3>Choose Option:</h3>
+    <div class="payment-options">
+        <a href="bkash.html">
+            <img src="https://www.tbsnews.net/sites/default/files/styles/amp_metadata_content_image_min_696px_wide/public/images/2019/07/11/bkash_logo_0.jpg" alt="bKash"></a>
+        <a href="nagad.html">
+            <img src="https://tfe-bd.sgp1.cdn.digitaloceanspaces.com/uploads/1585114992.jpg" alt="Nagad"></a>
+    </div>
+    <div class="cost">
+        <h3 id="display_cost"></h3>
+           <script>
+            function price(){
+                let Cost = Number(localStorage.getItem("price"));
+                let final_cost = Cost*750;
+                let print = `<p>Amount To Pay : ${final_cost}</p>`;
+                        document.getElementById("display_cost").innerHTML = print;
+            }
+        </script>
+    </div>
+</body>
+</html>
