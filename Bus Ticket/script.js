@@ -98,9 +98,9 @@ function search(){
         alert("Please fill all the fields");
         return;
     }
-    if(from == to){
-        alert("Both Starting Location & Destination Cant Be Same!");
-        return;
+    if(from == "Dhaka"){
+       alert("Both Starting Location & Destination Cant Be Same!");
+       return;
     }
 
                  let bus = [
@@ -214,7 +214,7 @@ function Confirm(){
 
         function payment(){
             const accnumber = document.getElementById("acc").value;
-                        const pin = document.getElementById("pass").value;
+                        const pin = document.getElementById("pin").value;
 
                         let Accounts = [
                             {
@@ -230,6 +230,7 @@ function Confirm(){
                                 password : "zxcv"
                             }
                         ];
+
                             let found = false;
                         for(let i=0;i<Accounts.length;i++){
                             if(Accounts[i].account_number == accnumber && Accounts[i].password == pin){
@@ -249,4 +250,3 @@ function Confirm(){
                             
                         }
         }
-
