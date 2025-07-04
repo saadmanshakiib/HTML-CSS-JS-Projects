@@ -7,7 +7,7 @@
         },
         {
             acc_num : "33628189661",
-            pin : "1111",
+            pin : "1131",
             balance : 230000
         },
         {
@@ -39,6 +39,7 @@ function signin(){
     if(found){
         localStorage.setItem("current_acc",accounts[account_index].acc_num);
         localStorage.setItem("current_balance",accounts[account_index].balance);
+                localStorage.setItem("current_pin",accounts[account_index].pin);
         window.location.href = "main.html";
     }
     else {
@@ -119,3 +120,48 @@ function withdraw(){
 
 }
 
+function transfer(){
+    const receiver_acc_no = document.getElementById("acc").value;
+    const amount = document.getElementById("money").value;
+    const user_pin = document.getElementById("pass").value;
+
+        var logged_in_acc_pin = localStorage.getItem("current_pin");
+        var logged_in_acc_balance = localStorage.getItem("current_balance");
+
+    if(logged_in_acc_pin == user_pin){
+    var receiver_acc_index;
+    var receiver_found = false;
+      for(let i=0;i<accounts.length;i++){
+        if(accounts[i].acc_num == receiver_acc_no){
+            receiver_found = true;
+            receiver_acc_index = i;
+            break;
+        }
+    }
+
+            var user_acc_index;
+            var user_found = false;
+            for(let i=0;i<accounts.length;i++){
+            if(accounts[i].pin == user_pin){
+            user_found = true;
+            user_acc_index = i;
+            break;
+        }
+    }
+
+    if(receiver_found){
+        accounts[receiver_acc_index].balance += amount;
+        accounts[user_acc_index].balance -= amount;
+        alert("Money Transferred\nYour Current Balance : "+accounts[user_acc_index].balance);
+        return;
+    }
+    if(!receiver_found){
+        alert("No User Found");
+    }
+ 
+}
+else{
+    alert("Incorrect Pin");
+    return;
+}
+}
