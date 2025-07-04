@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Quiz</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+    </head>
+    <body onload="loadQues()">
+        <h1>Quiz Going On</h1>
+        <div class="question-box"> 
+            <h2 id="ques">Question Text</h2>
+
+            <div>
+      <button class="option" onclick="checkAns(0)">Option 1</button>
+      <button class="option" onclick="checkAns(1)">Option 2</button>
+      <button class="option" onclick="checkAns(2)">Option 3</button>
+      <button class="option" onclick="checkAns(3)">Option 4</button>
+    </div>
+    <button id="nextBtn" onclick="nextQues()">Next</button>
+    <h3 id="scoreBoard"></h3>
+        </div>
+    </body>
+</html>
